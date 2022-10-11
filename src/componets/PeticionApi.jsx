@@ -18,7 +18,7 @@ function PeticionApi() {
         <div>
             <button onClick={obtenerPersonajes}>Obtener personajes</button>
 
-            {
+            {/* {
                 personajes.map((results) => (
                     <div key={results.id}>
                         <h3>{results.id} {results.name}</h3>
@@ -31,7 +31,28 @@ function PeticionApi() {
                         </ul>
                     </div>
                 ))
-            }
+            } */}
+
+
+            <div className="row">
+                {
+                    personajes.map((results) => (
+                        <div className="col col-sm-4 col-md-3" key={results.id}>
+                            <h3 className='text-center'>{results.id}. {results.name}</h3>
+                            <div className='text-center'>
+                            <img className='rounded' src={results.image} height="200px"></img>
+                            </div>
+                            <ul className='list-unstyled text-center'>
+                                <li>Status: {results.status}</li>
+                                <li>Species: {results.species}</li>
+                                <li>Gender: {results.gender}</li>
+                                <li>Type: {results.type}</li>
+                            </ul>
+                        </div>
+                    ))
+                }
+            </div>
+
 
 
         </div>
