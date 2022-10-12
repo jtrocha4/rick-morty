@@ -38,16 +38,18 @@ function PeticionApi() {
                 {
                     personajes.map((results) => (
                         <div className="col col-sm-4 col-md-3" key={results.id}>
-                            <h3 className='text-center'>{results.id}. {results.name}</h3>
-                            <div className='text-center'>
-                            <img className='rounded' src={results.image} height="200px"></img>
-                            </div>
-                            <ul className='list-unstyled text-center'>
+                            <div className="card">
+                            <img className='card-img-top' src={results.image} height="200px"></img>
+                            <div className='card-body'>
+                            <h5 className='card-title'>{results.id}- {results.name}</h5>
+                            <ul className='card-text list-unstyled'>
                                 <li>Status: {results.status}</li>
                                 <li>Species: {results.species}</li>
                                 <li>Gender: {results.gender}</li>
                                 <li>Type: {results.type}</li>
                             </ul>
+                            </div>
+                            </div>
                         </div>
                     ))
                 }
