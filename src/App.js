@@ -1,4 +1,5 @@
 import './App.css';
+import Paginacion from './componets/Paginacion';
 import PeticionApi from './componets/PeticionApi';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <p><b>Cantidad de temporadas: </b>6</p>
       <p><b>Cantidad de episodios: </b>55</p>
       <p><b>Creadores del programa: </b>Justin Roiland, Dan Harmon</p>
+      {/* <Paginacion></Paginacion> */}
       <PeticionApi></PeticionApi>
     </div>
   );
