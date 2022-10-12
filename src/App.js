@@ -12,7 +12,6 @@ function App() {
       <p><b>Cantidad de temporadas: </b>6</p>
       <p><b>Cantidad de episodios: </b>55</p>
       <p><b>Creadores del programa: </b>Justin Roiland, Dan Harmon</p>
-
       <PeticionApi></PeticionApi>
     </div>
   );

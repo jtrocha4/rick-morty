@@ -16,39 +16,25 @@ function PeticionApi() {
 
     return (
         <div>
-            <button onClick={obtenerPersonajes}>Obtener personajes</button>
-
-            {/* {
-                personajes.map((results) => (
-                    <div key={results.id}>
-                        <h3>{results.id} {results.name}</h3>
-                        <img src={results.image} alt="" height="250px" />
-                        <ul>
-                            <li>Status: {results.status}</li>
-                            <li>Species: {results.species}</li>
-                            <li>Gender: {results.gender}</li>
-                            <li>Type: {results.type}</li>
-                        </ul>
-                    </div>
-                ))
-            } */}
-
+            <div className='mb-4'>
+                <button onClick={obtenerPersonajes}>Obtener personajes</button>
+            </div>
 
             <div className="row">
                 {
                     personajes.map((results) => (
-                        <div className="col col-sm-4 col-md-3" key={results.id}>
-                            <div className="card">
-                            <img className='card-img-top' src={results.image} height="200px"></img>
-                            <div className='card-body'>
-                            <h5 className='card-title'>{results.id}- {results.name}</h5>
-                            <ul className='card-text list-unstyled'>
-                                <li>Status: {results.status}</li>
-                                <li>Species: {results.species}</li>
-                                <li>Gender: {results.gender}</li>
-                                <li>Type: {results.type}</li>
-                            </ul>
-                            </div>
+                        <div className="col col-auto col-sm-4 col-md-3" key={results.id}>
+                            <div className="card mb-3 mx-4">
+                                <img className='card-img-top' src={results.image} height="200px"></img>
+                                <div className='card-body'>
+                                    <h5 className='card-title'>{results.id}- {results.name}</h5>
+                                    <ul className='card-text list-unstyled'>
+                                        <li>Status: {results.status}</li>
+                                        <li>Species: {results.species}</li>
+                                        <li>Gender: {results.gender}</li>
+                                        <li>Type: {results.type}</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     ))
