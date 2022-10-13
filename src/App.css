@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "get_schwifty";
+    src: url("fount/get_schwifty.ttf") format("truetype");
+}
+
+h1{
+    font-family: "get_schwifty";
+    text-align: center;
+    color: #2596be;
+    text-shadow: 2px 2px #bed35e;
+}
+
+body{
+    font-family: monospace;
+    background: url(img/633234.jpg);
+}
+
+#info{
+    background-color: #22232b;
+    color: white;
+    margin-top: 1%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    border-radius: 5%;
+}

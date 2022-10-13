@@ -4,7 +4,8 @@ import PeticionApi from './componets/PeticionApi';
 
 function App() {
   return (
-    <div>
+    <div className='container mt-3'>
+      <div className='container-fluid' id='info'>
       <h1>Rick & Morty Wiki</h1>
       <br></br>
       <h3>Descripcion</h3>
@@ -13,7 +14,8 @@ function App() {
       <p><b>Cantidad de temporadas: </b>6</p>
       <p><b>Cantidad de episodios: </b>55</p>
       <p><b>Creadores del programa: </b>Justin Roiland, Dan Harmon</p>
-      {/* <Paginacion></Paginacion> */}
+      </div>
+      <Paginacion></Paginacion>
       <PeticionApi></PeticionApi>
     </div>
   );

@@ -15,6 +15,8 @@ function PeticionApi() {
             const { info, results } = await res.json()
             setPersonajes(results)
             setInfo(info)
+            console.log(info)
+            console.log(results)
         } catch (error) {
             console.log(error)
         }
@@ -43,16 +45,19 @@ function PeticionApi() {
                 <div className="row">
                     {
                         personajes.map((results) => (
-                            <div className="col col-auto col-sm-4 col-md-2" key={results.id}>
-                                <div className="card mb-3">
+                            <div className="col col-auto col-sm-4 col-md-3" key={results.id}>
+                                <div className="card text-bg-dark mb-3">
                                     <img className='card-img-top' src={results.image} height="200px"></img>
                                     <div className='card-body'>
-                                        <h5 className='card-title'>{results.id}- {results.name}</h5>
+                                        <h5 className='card-title'>{results.name}</h5>
                                         <ul className='card-text list-unstyled'>
-                                            <li>Status: {results.status}</li>
-                                            <li>Species: {results.species}</li>
-                                            <li>Gender: {results.gender}</li>
-                                            <li>Type: {results.type}</li>
+                                            <li>
+                                                <i className="bi bi-activity"> {results.status} </i>
+                                                - {results.species}
+                                            </li>
+                                            <li><i className="bi bi-geo"> {results.origin.name}</i></li>
+                                            <li> {results.gender === "Male" ?
+                                                (<i className="bi bi-gender-male"> Male</i>): (<i className="bi bi-gender-female"> Female</i>)} </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -61,7 +66,6 @@ function PeticionApi() {
                     }
                 </div>
             </div>
-
         </div>
     )
 }
