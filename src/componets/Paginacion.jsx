@@ -11,7 +11,7 @@ function Paginacion({ next, prev, paginaSiguiente, paginaAnterior }) {
     }
 
     return (
-        <div className='text-center'>
+        <div className='text-center fixed-bottom'>
             <div className='btn-group' role="group">
                 {
                     prev ? (
