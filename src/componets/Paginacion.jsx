@@ -13,17 +13,17 @@ function Paginacion({ next, prev, paginaSiguiente, paginaAnterior }) {
     return (
         <div className='text-center'>
             <div className='btn-group' role="group">
-            {
-                prev ? (
-                    <button className='btn btn-dark' onClick={anterior}>Anterior</button>
-                ) : null
-            }
-            {
-                next ? (
-                    <button className='btn btn-dark' onClick={siguiente}>Siguiente</button>
-                ) : null
-            }
-        </div>
+                {
+                    prev ? (
+                        <button className='btn btn-dark' onClick={anterior}>Anterior</button>
+                    ) : null
+                }
+                {
+                    next ? (
+                        <button className='btn btn-dark' onClick={siguiente}>Siguiente</button>
+                    ) : null
+                }
+            </div>
         </div>
     )
 }
